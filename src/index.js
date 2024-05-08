@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Route } from 'react-router-dom';
+import ManiPage from './Components/MainPage/MainPage';
+import LoginSignup from './Components/LoginSignup/LoginSignup';
+import MainPage from './Components/MainPage/MainPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App>
+      <BrowserRouter>
+      
+      <Route path='/mainpagee' element={<MainPage />} />
+      </BrowserRouter>
+    </App>
+
   </React.StrictMode>
 );
 
