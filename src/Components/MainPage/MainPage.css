@@ -148,7 +148,7 @@ body{
 
 }
 
-.home{
+.Information{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,24 +156,20 @@ body{
   padding: 0 15rem;
 }
 
-.home h3{
+.Information h3{
   font-size: 2.5rem;
   color: #fff;
 
 }
 
-.home h1{
+.Information h1{
   font-size: 5rem;
   color: #fff;
   
 }
 
-.home h1{
-  font-size: 5rem;
-  color: #fff;
-}
 
-.home p{
+.Information  p{
   font-size: 2rem;
   color: #eee;
   padding: 1rem 0;
