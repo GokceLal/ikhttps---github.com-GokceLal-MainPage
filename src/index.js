@@ -19,7 +19,7 @@ root.render(
    
       <BrowserRouter>
       
-         <Route path='/definitions' element={< DefinitionsPage/>} />
+         <Route path='/' element={< Main/>} />
       
       </BrowserRouter>
 

@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Management Page</title>
+    <title>Şirketler Sayfası</title>
     <link rel="stylesheet" href="SirketlerSayfası.css">
 </head>
 <body>
-    <h1>Company Management</h1>
+    <h1>Şirketler</h1>
     
     <section id="applications">
-        <h2>Company Applications</h2>
+        <h2>Şirketler Listesi</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Company Name</th>
+                    <th>Şirketin adı</th>
                     <th>Email</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th>statusu</th>
+                    <th>Durumu</th>
                 </tr>
 <tr>
     
@@ -25,19 +25,19 @@
             </thead>
             
             <tbody id="application-list">
-                <!-- Application rows will be populated here by JS -->
+              
             </tbody>
         </table>
     </section>
     
     <section id="manage-application">
-        <h2>Manage Application</h2>
+        <h2>Şirket Ekle</h2>
         <form id="application-form">
-            <label for="companyName">Company Name:</label>
+            <label for="companyName">Şirket Adı:</label>
             <input type="text" id="companyName" name="companyName" required>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            <label for="status">Status:</label>
+            <label for="status">status:</label>
             <select id="status" name="status">
                 <option value="pending">Pending</option>
                 <option value="approved">Approved</option>
@@ -48,24 +48,32 @@
     </section>
     
     <section id="membership-plan">
-        <h2>Create Membership Plan</h2>
+        <h2>Üyelik Planı</h2>
         <form id="membership-form">
-            <label for="planType">Plan Type:</label>
+            <label for="planType">Plan Tipi:</label>
             <select id="planType" name="planType">
-                <option value="monthly">Monthly</option>
-                <option value="yearly">Yearly</option>
+                <option value="monthly">Aylık</option>
+                <option value="yearly">Yıllık</option>
             </select>
-            <button type="submit">Create Plan</button>
+            <label for="membershipCompanyName">Şirket Adı:</label>
+            <input type="text" id="membershipCompanyName" name="membershipCompanyName" required>
+            <button type="submit">Planı Oluştur</button>
         </form>
     </section>
     
     <section id="company-details">
-        <h2>Company Details</h2>
+        <h2>Şirket Bilileri </h2>
         <form id="details-form">
-            <label for="details">Details:</label>
+            <label for="details">Eklenmek istenen:</label>
             <textarea id="details" name="details"></textarea>
-            <button type="submit">Update Details</button>
+            <button type="submit">Bilgiyi güncelle</button>
         </form>
+    </section>
+    
+    <section id="plans-section">
+        <h2>Planları Göster</h2>
+        <button id="show-plans-button">Planları Göster</button>
+        <div id="plans-table-container"></div>
     </section>
     
     <script src="SirketlerSayfası.js"></script>

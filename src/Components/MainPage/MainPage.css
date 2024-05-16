@@ -154,19 +154,58 @@ body{
   align-items: center;
   flex-flow: column;
   padding: 0 15rem;
+  
 }
 
-.Information h3{
-  font-size: 2.5rem;
-  color: #fff;
 
+#Information h1 {
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+    color: white;
 }
+
+#Information h1 span{
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+    color: #f9ca24;
+}
+
+
+#Holidays h1 {
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+    color: white;
+}
+
+#Holidays h1 span{
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+    color: #f9ca24;
+}
+
+
+#Information p {
+  color: white;
+  font-size: 20px;
+}
+
 
 .Information h1{
+  font-size: 5rem;
+  color: #f9ca24;
+  
+}
+
+.Information h1 span{
   font-size: 5rem;
   color: #fff;
   
 }
+
 
 
 .Information  p{
@@ -253,7 +292,7 @@ body{
 }
 
 .education .box-container .box span{
-  font-size: 1.3rem;
+  font-size: 1rem;
   background: #222;
   color: #fff;
   border-radius: 5rem;
@@ -294,13 +333,13 @@ body{
 }
 
 .contact .row .content{
-  flex:1 1 30rem;
+  flex:1 1 10rem;
   padding: 4rem;
   padding-bottom: 0;
 }
 
 .contact .row form{
-  flex:1 1 45rem;
+  flex:1 1 20rem;
   padding: 2rem;
   margin: 2rem;
   margin-bottom: 4rem;
@@ -361,11 +400,47 @@ body{
 }
 
 
-.about  img{
-  height: 17rem;
-  width: 17rem;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: .7rem solid var(--yellow);
+#calendar-container {
+
+  width: 200px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  background: wheat;
+}
+
+.day {
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #e0e0e0;
+}
+
+.holiday {
+  background-color: #ffeb3b;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white; 
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
 }

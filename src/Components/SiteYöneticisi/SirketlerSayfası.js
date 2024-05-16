@@ -1,9 +1,12 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const applicationForm = document.getElementById('application-form');
     const membershipForm = document.getElementById('membership-form');
     const detailsForm = document.getElementById('details-form');
     const applicationList = document.getElementById('application-list');
+    const showPlansButton = document.getElementById('show-plans-button');
+    const plansTableContainer = document.getElementById('plans-table-container');
+    const planTypeSelect = document.getElementById('planType');
+    const membershipCompanyNameInput = document.getElementById('membershipCompanyName');
 
     applicationForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -17,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     membershipForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const planType = document.getElementById('planType').value;
+        const planType = planTypeSelect.value;
+        const membershipCompanyName = membershipCompanyNameInput.value;
         
         // Logic to handle membership plan creation
-        createMembershipPlan(planType);
+        createMembershipPlan(planType, membershipCompanyName);
     });
 
     detailsForm.addEventListener('submit', (e) => {
@@ -29,6 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Logic to handle company details update
         updateCompanyDetails(details);
+    });
+
+    showPlansButton.addEventListener('click', () => {
+        showPlans();
     });
 
     function addApplication(companyName, email, status) {
@@ -45,14 +53,36 @@ document.addEventListener('DOMContentLoaded', () => {
         applicationList.appendChild(row);
     }
 
-    function createMembershipPlan(planType) {
+    function createMembershipPlan(planType, membershipCompanyName) {
         // Logic to handle membership plan creation
-        console.log(`Creating ${planType} membership plan.`);
+        console.log(`Creating ${planType} membership plan for company ${membershipCompanyName}.`);
+        // Tabloya ekleme
+        const plansTableBody = document.getElementById('plans-table-body');
+        const newRow = plansTableBody.insertRow();
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        cell1.textContent = membershipCompanyName;
+        cell2.textContent = planType;
     }
 
     function updateCompanyDetails(details) {
         // Logic to handle company details update
         console.log(`Updating company details: ${details}`);
+    }
+
+    function showPlans() {
+        const plansTable = document.createElement('table');
+        plansTable.innerHTML = `
+            <thead>
+                <tr>
+                    <th>Şirket Adı</th>
+                    <th>Plan Tipi</th>
+                </tr>
+            </thead>
+            <tbody id="plans-table-body"></tbody>
+        `;
+        plansTableContainer.innerHTML = ''; // Önceki tabloyu temizle
+        plansTableContainer.appendChild(plansTable);
     }
 
     window.approveApplication = (email) => {
