@@ -6,22 +6,28 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route } from 'react-router-dom';
 import ManiPage from './Components/MainPage/MainPage';
 import LoginSignup from './Components/LoginSignup/LoginSignup';
-import MainPage from './Components/MainPage/MainPage';
+import AdminPanel from './Components/AdminPanel/AdminPanel';
+
+import DefinitionsPage from './Components/TanimlamalarSayfasi/DefinitionsPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App>
+      
+      
+   
       <BrowserRouter>
       
-      <Route path='/mainpagee' element={<MainPage />} />
+         <Route path='/definitions' element={< DefinitionsPage/>} />
+      
       </BrowserRouter>
+
+    
     </App>
 
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();

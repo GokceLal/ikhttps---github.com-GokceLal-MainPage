@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanımlamalar Sayfası</title>
+    <link rel="stylesheet" href="DefinitionsPage.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tanımlamalar Sayfası</h1>
+        
+        <div class="definitions-list">
+            <h2>Mevcut Tanımlamalar</h2>
+            <table id="definitions">
+                <thead>
+                    <tr>
+                        <th>Tanımlama Adı</th>
+                        <th>Açıklama</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Tanımlamalar burada listelenecek -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="add-definition">
+            <h2>Yeni Tanım Ekle</h2>
+            <button onclick="showAddForm()">Yeni Tanım Ekle</button>
+        </div>
+
+        <!-- Ekleme Formu -->
+        <div id="addForm" style="display: none;">
+            <h2>Tanım Ekle</h2>
+            <form id="addDefinitionForm">
+                <label for="addDefinitionName">Tanımlama Adı:</label>
+                <input type="text" id="addDefinitionName" name="addDefinitionName" required>
+                
+                <label for="addDefinitionDescription">Açıklama:</label>
+                <textarea id="addDefinitionDescription" name="addDefinitionDescription" required></textarea>
+                
+                <button type="submit">Ekle</button>
+                <button type="button" onclick="cancelAdd()">İptal</button>
+            </form>
+        </div>
+
+        <!-- Güncelleme Formu -->
+        <div id="updateForm" style="display: none;">
+            <h2>Tanım Güncelle</h2>
+            <form id="updateDefinitionForm">
+                <label for="updateDefinitionName">Tanımlama Adı:</label>
+                <input type="text" id="updateDefinitionName" name="updateDefinitionName" required>
+                
+                <label for="updateDefinitionDescription">Açıklama:</label>
+                <textarea id="updateDefinitionDescription" name="updateDefinitionDescription" required></textarea>
+                
+                <button type="submit">Güncelle</button>
+                <button type="button" onclick="cancelUpdate()">İptal</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="DefinitionsPage.js"></script>
+</body>

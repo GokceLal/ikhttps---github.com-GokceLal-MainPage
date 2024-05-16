@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./MainPage.css";
+import "./AdminPanel.css";
+import bilgeadam from '../Assets/bilgeadam.png'
 
 
 
 
-function MainPage() {
+
+function AdminPanel() {
     return (
     <>
      
@@ -14,15 +16,15 @@ function MainPage() {
         
             <div class="user">
          <img src="https://picsum.photos/200/300" alt=""/>
-         <h3 class="name">Human Recorcues</h3>
-         <p class="post">IK</p>
+         <h3 class="name">Admin Panel</h3>
+         <p class="post">asdf</p>
          
      </div>
      
              <nav class="navbar">
             <ul>
                 <li>
-                   <a href="#Information">Information</a>
+                   <a href="#companiespage">Companies page</a>
                 </li>
                 <li>
                     <a href="#WorkingStaff">Working Staff</a>
@@ -48,7 +50,7 @@ function MainPage() {
         
         
         <div>
-    <section class="Information" id="Information">
+    <section class="companiespage" id="companiespage">
         <h3>Hı there</h3>
         <h1>Information <span>Company</span></h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod deserunt voluptates nobis, quibusdam earum maxime rerum exercitationem nulla reiciendis temporibus suscipit molestiae ducimus tenetur voluptatem? Repellat sunt placeat neque illum.
@@ -59,16 +61,18 @@ Laboriosam, aut ipsum! Molestias delectus dolorum accusantium necessitatibus ill
 <a href="about"><button class="btn">More information<i class="fas fa-user"></i></button></a>
     </section>
     </div>
+
+
     <section class="about" id="about">
     <h1 class="heading">
-        <span>Working</span> Staff
+        <span>Companies </span>Page
     </h1>
 
     <div class="row">
         <div class="info">
-            <h3><span> name :  </span> name surname </h3>
-            <h3><span> age :  </span> 20 </h3>
-            <h3><span> qualification :  </span> BMS </h3>
+            <h3><span> Company Name :  </span> BilgeAdam </h3>
+            <h3><span>  mail-cheack:  </span> active </h3>
+            <h3><span> employees number :  </span> 12345 </h3>
             <h3><span> post :  </span> front end developer </h3>
             <a href="#"><button class="btn">Aktifleştir <i class="fas fa-download"></i></button></a>
             <a href="#"><button class="btn">Pasifleştir <i class="fas fa-download"></i></button></a>
@@ -100,11 +104,11 @@ Laboriosam, aut ipsum! Molestias delectus dolorum accusantium necessitatibus ill
 
 
 <section class="education">
-    <h1 class="heading">my<span> education</span></h1>
+    <h1 class="heading">Definitions <span>Page</span></h1>
     <div class="box-container">
         <div class="box">
         <i class="fas fa-graduation-cap"></i>
-        <span>2016</span>
+        <span>Annual leaves(Yıllık izinler)</span>
         <h3>front end</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, repellat vero tempora pariatur dolorum odit earum eaque tempore laborum quas. Officia impedit aperiam qui corrupti laboriosam natus, repudiandae praesentium nostrum?</p>
         </div>
@@ -125,6 +129,55 @@ Laboriosam, aut ipsum! Molestias delectus dolorum accusantium necessitatibus ill
                 </div>
     </div>
 </section>                                  
+<section class="permissions" id="permissions">
+    <h1 class="heading">
+        Company <span> Permissions</span>
+    </h1>
+
+    <div class="box-container">
+        
+           
+          <div class="box">
+          <img src={bilgeadam}alt="" onclick="resmeTiklandiginda('AdminPanel.html')"/>
+          
+          </div>
+
+          <div class="box">
+            <img src="https://picsum.photos/200/300" alt="" />
+          </div>
+
+
+          <div class="box">
+            <img src="https://picsum.photos/200/300" alt=""/>
+          </div>
+
+
+          <div class="box">
+            <img src="https://picsum.photos/200/300" alt=""/>
+          </div>
+
+
+          <div class="box">
+            <img src="https://picsum.photos/200/300" alt=""/>
+          </div>
+
+
+          <div class="box">
+            <img src="https://picsum.photos/200/300" alt=""/>
+          </div>
+
+          <div class="box">
+            <img src="https://picsum.photos/200/300" alt=""/>
+          </div>
+
+        </div>
+       
+    
+</section>
+        
+
+
+
 
 <section class="contact" id="contacy">
     <h1 class="heading">
@@ -169,4 +222,4 @@ Laboriosam, aut ipsum! Molestias delectus dolorum accusantium necessitatibus ill
     );
 }
 
-export default MainPage
+export default AdminPanel

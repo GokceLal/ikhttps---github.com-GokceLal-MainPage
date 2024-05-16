@@ -1,6 +1,11 @@
 import './App.css';
 import LoginSignup from './Components/LoginSignup/LoginSignup';
-import MainPage from './Components/MainPage/MainPage';
+import AdminPanel from './Components/AdminPanel/AdminPanel';
+import DefinitionsPage from './Components/TanimlamalarSayfasi/DefinitionsPage';
+
+
+
+
 
 
 
@@ -8,7 +13,7 @@ function App() {
   return (
     <div>
       
-      <MainPage/>
+      <DefinitionsPage/>
       
 
     </div>

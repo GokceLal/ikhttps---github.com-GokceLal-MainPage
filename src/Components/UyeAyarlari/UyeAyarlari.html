@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Üyelik Ayarları</title>
+<link rel="stylesheet" href="UyelikAyarlari.css">
+</head>
+<body>
+<div class="container">
+    <h1>Üyelik Ayarları</h1>
+    <button onclick="openNewCompanyForm()">Yeni Şirket Ekle</button>
+    <table id="companyTable">
+        <tr>
+            <th>Şirket Adı</th>
+            <th>İşlemler</th>
+        </tr>
+        <tr>
+            <td>Şirket 1</td>
+            <td>
+                <button onclick="openCompanySettings('Şirket 1')">Ayarlar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Şirket 2</td>
+            <td>
+                <button onclick="openCompanySettings('Şirket 2')">Ayarlar</button>
+            </td>
+        </tr>
+        <!-- Buraya istediğiniz kadar şirket ekleyebilirsiniz -->
+    </table>
+</div>
+
+<div id="companySettingsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCompanySettings()">&times;</span>
+        <h2 id="companyName"></h2>
+        <div id="companySettings">
+            <!-- Şirket ayarları buraya eklenecek -->
+            <label for="email">E-posta:</label>
+            <input type="text" id="email">
+            <label for="contactName">Yetkili Adı:</label>
+            <input type="text" id="contactName">
+            <label for="phoneNumber">Telefon Numarası:</label>
+            <input type="text" id="phoneNumber">
+        </div>
+        <button id="updateButton" onclick="updateCompanySettings()" style="display:none;">Güncelle</button>
+        <button id="viewInfoButton" onclick="viewCompanyInfo()" style="display:none;">Bilgilere Bak</button>
+    </div>
+</div>
+
+<script src="UyelikAyarlari.js"></script>
+</body>
+</html>

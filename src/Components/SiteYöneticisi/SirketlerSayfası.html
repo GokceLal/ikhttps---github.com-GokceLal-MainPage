@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Management Page</title>
+    <link rel="stylesheet" href="SirketlerSayfası.css">
+</head>
+<body>
+    <h1>Company Management</h1>
+    
+    <section id="applications">
+        <h2>Company Applications</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+<tr>
+    
+</tr>
+            </thead>
+            
+            <tbody id="application-list">
+                <!-- Application rows will be populated here by JS -->
+            </tbody>
+        </table>
+    </section>
+    
+    <section id="manage-application">
+        <h2>Manage Application</h2>
+        <form id="application-form">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <section id="membership-plan">
+        <h2>Create Membership Plan</h2>
+        <form id="membership-form">
+            <label for="planType">Plan Type:</label>
+            <select id="planType" name="planType">
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+            <button type="submit">Create Plan</button>
+        </form>
+    </section>
+    
+    <section id="company-details">
+        <h2>Company Details</h2>
+        <form id="details-form">
+            <label for="details">Details:</label>
+            <textarea id="details" name="details"></textarea>
+            <button type="submit">Update Details</button>
+        </form>
+    </section>
+    
+    <script src="SirketlerSayfası.js"></script>
+</body>
+</html>

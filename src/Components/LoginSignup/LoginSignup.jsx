@@ -4,6 +4,8 @@ import user_icon from '../Assets/user_icon.png'
 import email_icon from '../Assets/email_icon.png'
 import password_icon from '../Assets/password_icon.png'
 
+
+
 const LoginSignup = () => {
 
 const [action,setAction] = useState("Sign Up");
@@ -15,7 +17,7 @@ const [action,setAction] = useState("Sign Up");
             <div className="text">{action}</div>
             <div className="underline"></div>
         </div>
-        Heeeey
+        
         <div className="inputs">
             {action==="Login"?<div></div>:<div className="input">
                 <img src={user_icon}alt=""/>
@@ -32,6 +34,7 @@ const [action,setAction] = useState("Sign Up");
             </div>
         </div>
         {action==="Sign Up"?<div></div>: <div className="forgot-password">Lost Password? <span>Clich Here!</span></div>}
+      
        
         <div className="submit-container">
             <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
